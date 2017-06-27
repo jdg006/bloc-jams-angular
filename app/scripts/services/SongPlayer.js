@@ -9,7 +9,7 @@
          * @desc currentAlbum object
           * @type {Object}
           */
-          var currentAlbum = Fixtures.getAlbum();
+          SongPlayer.currentAlbum = Fixtures.getAlbum();
 
         /**
          * @desc Buzz object audio file
@@ -59,7 +59,7 @@
        *@return returns the index of the currently selected song
        */
       var getSongIndex = function(song) {
-     return currentAlbum.songs.indexOf(song);
+     return SongPlayer.currentAlbum.songs.indexOf(song);
    };
 
       /**
@@ -106,13 +106,13 @@
      var currentSongIndex = getSongIndex(SongPlayer.currentSong);
      currentSongIndex--;
      if (currentSongIndex < 0) {
-         currentSongIndex= currentAlbum.songs.length-1;
+         currentSongIndex= SongPlayer.currentAlbum.songs.length-1;
          var song= currentAlbum.songs[currentSongIndex];
          setSong(song);
          playSong(song);
        }
      else {
-           var song = currentAlbum.songs[currentSongIndex];
+           var song = SongPlayer.currentAlbum.songs[currentSongIndex];
            setSong(song);
            playSong(song);
        }
@@ -125,15 +125,15 @@
  SongPlayer.next = function() {
      var currentSongIndex = getSongIndex(SongPlayer.currentSong);
      currentSongIndex++;
-     if (currentSongIndex > currentAlbum.songs.length-1) {
+     if (currentSongIndex > SongPlayer.currentAlbum.songs.length-1) {
        currentSongIndex=0;
-       var song = currentAlbum.songs[currentSongIndex];
+       var song = SongPlayer.currentAlbum.songs[currentSongIndex];
        setSong(song);
        playSong(song);
 
        }
      else {
-           var song = currentAlbum.songs[currentSongIndex];
+           var song = SongPlayer.currentAlbum.songs[currentSongIndex];
            setSong(song);
            playSong(song);
        }
