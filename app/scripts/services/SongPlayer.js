@@ -16,6 +16,13 @@
          * @type {Object}
          */
          var currentBuzzObject = null;
+
+         /**
+          * @desc holds the value of the volume
+          * @type {Object}
+          */
+
+
      /**
       * @function playSong
       * @desc plays currentBuzzObject and sets song.playing to "true"
@@ -160,6 +167,15 @@
          currentBuzzObject.setTime(time);
      }
  };
+
+SongPlayer.volume=50;
+
+SongPlayer.setVolume=function(volume){
+
+  currentBuzzObject.setVolume(volume)
+}
+
+
 
           return SongPlayer;
      }
