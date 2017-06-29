@@ -6,10 +6,7 @@
        return '-:--';
    }
 
-           var minutes= Math.floor(seconds/60);
-           var secondsTens= Math.floor((seconds%60)/10);
-           var secondsOnes= Math.floor((seconds%60)%10);
-           return minutes+":"+secondsTens+secondsOnes;
+           return buzz.toTimer(seconds);
          };
      }
 
