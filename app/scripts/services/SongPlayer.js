@@ -125,7 +125,7 @@
      currentSongIndex--;
      if (currentSongIndex < 0) {
          currentSongIndex= SongPlayer.currentAlbum.songs.length-1;
-         var song= currentAlbum.songs[currentSongIndex];
+         var song= SongPlayer.currentAlbum.songs[currentSongIndex];
          setSong(song);
          playSong(song);
        }

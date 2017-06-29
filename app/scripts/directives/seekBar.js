@@ -67,9 +67,9 @@
      });
  };
 
- var notifyOnChange = function(a) {
+ var notifyOnChange = function(newValue) {
       if (typeof scope.onChange === 'function') {
-          scope.onChange({value: a});
+          scope.onChange({value: newValue});
       }
   };
           }
@@ -78,4 +78,5 @@
   angular
    .module('blocJams')
    .directive('seekBar', ['$document', seekBar]);
+
 })();
